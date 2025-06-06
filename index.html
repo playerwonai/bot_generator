@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlayerWon's AI Chatbot Generator</title>
+    <link rel="stylesheet" href="style.css?v=2">
+</head>
+<body>
+    <div class="container">
+        <div class="header-card card">
+            <h1>PlayerWon's AI Chatbot Generator V0.8</h1>
+            <h4>Generate detailed bots with included scenarios and starting messages!</h4>
+        </div>
+        
+        <form id="botForm">
+            <div class="filters-container">
+                <div class="fixed-filters-row">
+                    <div class="filter-group">
+                        <h3>Content Type 18+ Required</h3>
+                        <div class="radio-group">
+                            <label><input type="radio" name="contentType" value="sfw" required> 🤗 SFW</label>
+                            <label><input type="radio" name="contentType" value="nsfw"> 🥵 NSFW</label>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <h3>User Perspective</h3>
+                        <div class="radio-group">
+                            <label><input type="radio" name="pov" value="any" required> 👤 AnyPOV</label>
+                            <label><input type="radio" name="pov" value="male"> 👨 MalePOV</label>
+                            <label><input type="radio" name="pov" value="female"> 👩 FemalePOV</label>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <h3>Seeking</h3>
+                        <div class="radio-group">
+                            <label><input type="radio" name="seeking" value="female" required> 👩 Female</label>
+                            <label><input type="radio" name="seeking" value="male"> 👨 Male</label>
+                            <label><input type="radio" name="seeking" value="any_gender"> 👤 Any</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="scalable-filters-row">
+                    <div class="filter-group">
+                        <h3>Genre</h3>
+                        <select id="genre" name="genre" required>
+                            <option value="" disabled selected>Select a genre...</option>
+                            <option value="modern(realistic)">🏙️ Modern</option>
+                            <option value="fantasy">🏰 Fantasy</option>
+                            <option value="sci-fi">🚀 Sci-Fi</option>
+                            <option value="superhero">🦸 Superhero</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <h3>Bot Type</h3>
+                        <select id="botType" name="botType" required>
+                            <option value="" disabled selected>Select bot type...</option>
+                            <option value="character">👤 Character</option>
+                            <option value="scenario">📚 Scenario</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <h3>Token Limiter</h3>
+                        <input type="range" id="maxTokens" name="maxTokens" min="1000" max="6000" value="2400" step="100">
+                        <div class="token-display">
+                            <span id="tokenValue">2400</span> Tokens
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <div class="form-group">
+                    <label for="themes">Themes & Instructions</label>
+                    <textarea id="themes" name="themes" maxlength="2000" required placeholder="Describe any additional character/scenario themes, traits, interests, etc, and/or provide specific instructions for the AI to generate your bot"></textarea>
+                </div>
+            </div>
+
+            <div class="form-section" id="model-config-section">
+                <h3>Model Configuration</h3>
+                
+                <div class="form-group">
+                <label class="center-label" id="auto-fill-config">Auto Fill Configuration</label>
+                    <div class="button-container">
+                        <button type="button" id="openrouterBtn">OpenRouter</button>
+                        <button type="button" id="chutesBtn">Chutes</button>
+                    </div>
+                    <p class="note center">Pre-configure model settings with one click</p>
+                </div>
+
+                <div class="form-group">
+                    <label for="model">Model</label>
+                    <input type="text" id="model" name="model" required placeholder="ex: deepseek/deepseek-r1-0528:free">
+                </div>
+
+                <div class="form-group">
+                    <label for="endpoint">API Endpoint</label>
+                    <input type="text" id="endpoint" name="endpoint" required placeholder="ex: https://openrouter.ai/api/v1/chat/completions">
+                </div>
+
+                <div class="form-group">
+                    <label for="apiKey">API Key</label>
+                    <input type="password" id="apiKey" name="apiKey" autocomplete="off" required>
+                    <p class="note warning">⚠️Security Note: Always use temporary API keys and delete them after use!</p>
+                </div>
+            </div>
+
+    <button type="submit" class="generate-btn">Generate Bot</button>
+<div class="footer-card card">
+    <a class="footer-item" href="mailto:PlayerWonAI@gmail.com">PlayerWonAI@gmail.com</a>
+    <a class="footer-item" href="https://janitorai.com/profiles/bfb0f1c4-ac80-4ce9-8fdb-16454b68942f_profile-of-player-won" target="_blank" rel="noopener noreferrer">JanitorAI</a>
+    <a class="footer-item" href="https://crushon.ai/profile/795d18ba-e212-11ee-8681-320cdf47c9fb" target="_blank" rel="noopener noreferrer">CrushOn</a>
+    <a class="footer-item" href="https://spicychat.ai/creator/playerwon" target="_blank" rel="noopener noreferrer">SpicyChat</a>
+    <a class="footer-item" href="https://discord.gg/uyMVT4q3r8" target="_blank" rel="noopener noreferrer">Discord</a>
+</div>
+</form>
+    </div>
+
+    <div id="ageModal" class="modal">
+        <div class="modal-content">
+            <h2>Age Verification</h2>
+            <p>You must be 18+ to use this service</p>
+            <button id="confirmAge">I am 18+</button>
+            <button id="cancelAge">Cancel</button>
+        </div>
+    </div>
+
+    <div id="loadingOverlay" class="modal">
+        <div class="modal-content">
+            <div class="spinner"></div>
+            <p>Generating your bot... This may take a few moments</p>
+        </div>
+    </div>
+
+    <script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
+    <script>
+    kofiWidgetOverlay.draw('playerwonai', {
+        'type': 'floating-chat',
+        'floating-chat.donateButton.text': 'Tip Me',
+        'floating-chat.donateButton.background-color': '#2d3748',
+        'floating-chat.donateButton.text-color': '#e2e8f0'
+    });
+    </script>
+</body>
+<script src="templateLoader.js" type="module"></script>
+<script src="script.js" type="module"></script>
+</html>

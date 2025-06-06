@@ -1,0 +1,5 @@
+# OpenRouter API configuration
+openrouter:
+  api_key: "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"
+  default_model: "deepseek/deepseek-r1-0528:free"
+  fallback_model: "google/gemini-2.0-flash-exp:free"

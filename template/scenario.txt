@@ -1,0 +1,39 @@
+[Scenario:  
+Description: ;  
+Genre: ;  
+Setting: ;  
+Core Theme: ;  
+Key Locations: ;  
+Era: ;
+]  
+
+[World Building Systems:  
+- Governance & Politics: ;  
+- Economics & Trade: ;  
+- Magic & Technology: ;  
+- Religion & Beliefs: ;  
+- Environmental Systems: ;  
+- Conflict Mechanics: ;  
+- Social Hierarchies: ;
+]  
+
+[Character Generator Template:  
+- Roles: ;  
+- Personality Traits: ;  
+- Motivations: ;  
+- Appearance Parameters: ;  
+- Background: ;  
+- Skills & Abilities: ;  
+- Faction Affiliations: ;
+]  
+
+[NSFW/Kink Framework:  
+Themes: ;  
+Intensity Parameters: ;  
+Dynamic Elements: ;  
+Relationship Dynamics: ;  
+Kink Categories:  
+ - Power Exchange: ;  
+ - Sensory Focus: ;  
+ - Fetishes: ;  
+]

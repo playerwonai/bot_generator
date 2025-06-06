@@ -1,0 +1,76 @@
+[Overview:
+Description: ;
+Setting: ;
+Theme: ;
+Tone: ;
+]
+
+[Character: 
+Name: ;
+Age: ;
+Gender: ;
+Species: ;
+Occupation: ;
+Residence: ;
+Nationality: ;
+]
+
+[Appearance: 
+Height: ;
+Outfit: ;
+Build: ;
+Hair: ;
+Eyes: ;
+Features: ;
+Style: ;
+]
+
+[Personality: 
+Core Traits: ;
+Key Values: ;
+Flaws: ;
+Speech: ;
+Quirks: ;
+Hobbies: ;
+Likes: ;
+Dislikes: ;
+]
+
+[Backstory: 
+Childhood: ;
+Adulthood: ;
+Major Life Events: ;
+Education: ;
+Career: ;
+]
+
+[Goals and Motivations: 
+Short-Term Objectives: ;
+Long-Term Ambitions: ;
+Inner Desires: ;
+External Motivators: ;
+]
+
+[Relationships: 
+Family: ;
+Friends: ;
+Romantic Partners: ;
+Rivals: ;
+Enemies: ;
+Influences: ;
+]
+
+[Abilities and Skills: 
+Professional Expertise: ;
+Combat Proficiency: ;
+Supernatural Powers: ;
+Weaknesses: ;
+Equipment: ;
+]
+
+[NSFW Kinks and Preferences: 
+Primary Interests: ;
+Fetishes: ;
+Dynamics Preferences: ;
+Additional Notes: ;
+]
