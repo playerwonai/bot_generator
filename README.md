@@ -1,15 +1,11 @@
 # Bot Generator Project
 
-This project generates interactive bots using AI templates. The web interface allows users to create and customize bot personalities.
+This project generates interactive bots using templates. The web interface allows users to create and customize bot personalities.
 
 ## Features
 - Dynamic bot personality generation
 - Template-based scenario creation
 - Real-time preview
-
-## Setup
-1. Clone repository: `git clone https://github.com/playerwonai/bot_generator.git`
-2. Open `index.html` in any modern browser
 
 ## Deployment
 This project is deployed via GitHub Pages at:  
