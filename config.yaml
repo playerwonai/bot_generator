@@ -1,5 +1,0 @@
-# OpenRouter API configuration
-openrouter:
-  # API key removed for security
-  default_model: "deepseek/deepseek-r1-0528:free"
-  fallback_model: "google/gemini-2.0-flash-exp:free"
