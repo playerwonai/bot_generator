@@ -137,26 +137,26 @@ form.addEventListener('submit', async function(e) {
     
 
     openrouterBtn?.addEventListener('click', function() {
-        modelInput.value = 'deepseek/deepseek-r1-0528:free';
+        modelInput.value = 'tngtech/deepseek-r1t2-chimera:free';
         endpointInput.value = 'https://openrouter.ai/api/v1/chat/completions';
     });
 
     chutesBtn?.addEventListener('click', function() {
-        modelInput.value = 'deepseek-ai/DeepSeek-R1-0528';
+        modelInput.value = 'tngtech/DeepSeek-TNG-R1T2-Chimera';
         endpointInput.value = 'https://llm.chutes.ai/v1/chat/completions';
     });
     
     // Test setting values programmatically
     if (openrouterBtn && modelInput && endpointInput) {
         openrouterBtn.addEventListener('click', function() {
-            modelInput.value = 'deepseek/deepseek-r1-0528:free';
+            modelInput.value = 'tngtech/deepseek-r1t2-chimera:free';
             endpointInput.value = 'https://openrouter.ai/api/v1/chat/completions';
         });
     }
     
     if (chutesBtn && modelInput && endpointInput) {
         chutesBtn.addEventListener('click', function() {
-            modelInput.value = 'deepseek-ai/DeepSeek-R1-0528';
+            modelInput.value = 'tngtech/DeepSeek-TNG-R1T2-Chimera';
             endpointInput.value = 'https://llm.chutes.ai/v1/chat/completions';
         });
     }
