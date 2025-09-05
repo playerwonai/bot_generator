@@ -61,7 +61,7 @@ form.addEventListener('submit', async function(e) {
                     role: 'user', 
                     content: botConfig
                 }],
-                "max_tokens": 40000,
+                "max_tokens": 24000,
                 "temperature": 0.6
             };
         
@@ -105,7 +105,7 @@ form.addEventListener('submit', async function(e) {
     // Theme character counter
     const themeTextarea = document.querySelector('textarea[name="themes"]');
     themeTextarea.addEventListener('input', function() {
-        const remaining = 2000 - this.value.length;
+        const remaining = 10000 - this.value.length;
         const counter = document.getElementById('charCounter') || 
                         document.createElement('span');
         counter.id = 'charCounter';
